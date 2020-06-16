@@ -1,0 +1,212 @@
+\hypertarget{scrolling_8c}{}\section{scrolling.\+c File Reference}
+\label{scrolling_8c}\index{scrolling.\+c@{scrolling.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}scrolling.\+h\char`\"{}}\newline
+Include dependency graph for scrolling.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{scrolling_8c_afba8c0f01507d2a24008ca456b56d346}{initialiser} (\hyperlink{structObjet}{Objet} $\ast$perso, \hyperlink{structObjet}{Objet} $\ast$map, \hyperlink{structObjet}{Objet} $\ast$wood, \hyperlink{structObjet}{Objet} $\ast$boat, \hyperlink{structObjet}{Objet} $\ast$map2, \hyperlink{structObjet}{Objet} $\ast$failed)
+\begin{DoxyCompactList}\small\item\em To initialize the objecs. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_ab79683685c7ff28aa21a69af89757f98}{setup} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$map, \hyperlink{structObjet}{Objet} $\ast$wood, \hyperlink{structObjet}{Objet} $\ast$boat, \hyperlink{structObjet}{Objet} $\ast$map2, \hyperlink{structObjet}{Objet} $\ast$perso)
+\begin{DoxyCompactList}\small\item\em To display objects. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_afcad6f94e89302ab712792ed4c850beb}{affichage} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$boat, \hyperlink{structObjet}{Objet} $\ast$wood, \hyperlink{structObjet}{Objet} $\ast$map, \hyperlink{structObjet}{Objet} $\ast$map2, \hyperlink{structObjet}{Objet} $\ast$perso)
+\begin{DoxyCompactList}\small\item\em To display objects. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_a610615c1db8b27253bd1a92619cba712}{scrolling\+\_\+droit} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$map, S\+D\+L\+\_\+\+Rect $\ast$pos, \hyperlink{structObjet}{Objet} $\ast$boat)
+\begin{DoxyCompactList}\small\item\em To move background to the right. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_af84ab34093d4babe8afbdb32a3faab1f}{scrolling\+\_\+gauche} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$map, S\+D\+L\+\_\+\+Rect $\ast$pos, \hyperlink{structObjet}{Objet} $\ast$boat)
+\begin{DoxyCompactList}\small\item\em To move background to the left. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_a3ee80f6c5c22b2324495d5642fd0bf9f}{evenement} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$boat, \hyperlink{structObjet}{Objet} $\ast$wood, \hyperlink{structObjet}{Objet} $\ast$map, int $\ast$running, S\+D\+L\+\_\+\+Rect $\ast$pos, \hyperlink{structObjet}{Objet} $\ast$map2, \hyperlink{structObjet}{Objet} $\ast$perso)
+\begin{DoxyCompactList}\small\item\em To move background right and left through events. \end{DoxyCompactList}\item 
+void \hyperlink{scrolling_8c_a326070ea1c05e146d232d831d8b31add}{deplacement\+\_\+objet} (\hyperlink{structObjet}{Objet} $\ast$objet, int $\ast$running)
+\begin{DoxyCompactList}\small\item\em To move character . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scrolling_8c_a8242d53b50caa9c08647027847787989}\label{scrolling_8c_a8242d53b50caa9c08647027847787989}} 
+void {\bfseries free\+\_\+memory} (\hyperlink{structObjet}{Objet} $\ast$boat, \hyperlink{structObjet}{Objet} $\ast$wood, \hyperlink{structObjet}{Objet} $\ast$map, \hyperlink{structObjet}{Objet} $\ast$map2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{scrolling_8c_afcad6f94e89302ab712792ed4c850beb}\label{scrolling_8c_afcad6f94e89302ab712792ed4c850beb}} 
+\index{scrolling.\+c@{scrolling.\+c}!affichage@{affichage}}
+\index{affichage@{affichage}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{affichage()}{affichage()}}
+{\footnotesize\ttfamily void affichage (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{wood,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map2,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{perso }\end{DoxyParamCaption})}
+
+
+
+To display objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & \\
+\hline
+{\em perso} & character \\
+\hline
+{\em map} & first background \\
+\hline
+{\em wood} & character \\
+\hline
+{\em boat} & object in backgound \\
+\hline
+{\em map2} & second backgound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_a326070ea1c05e146d232d831d8b31add}\label{scrolling_8c_a326070ea1c05e146d232d831d8b31add}} 
+\index{scrolling.\+c@{scrolling.\+c}!deplacement\+\_\+objet@{deplacement\+\_\+objet}}
+\index{deplacement\+\_\+objet@{deplacement\+\_\+objet}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{deplacement\+\_\+objet()}{deplacement\_objet()}}
+{\footnotesize\ttfamily void deplacement\+\_\+objet (\begin{DoxyParamCaption}\item[{\hyperlink{structObjet}{Objet} $\ast$}]{objet,  }\item[{int $\ast$}]{running }\end{DoxyParamCaption})}
+
+
+
+To move character . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objet} & object \\
+\hline
+{\em running} & loop variable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_a3ee80f6c5c22b2324495d5642fd0bf9f}\label{scrolling_8c_a3ee80f6c5c22b2324495d5642fd0bf9f}} 
+\index{scrolling.\+c@{scrolling.\+c}!evenement@{evenement}}
+\index{evenement@{evenement}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{evenement()}{evenement()}}
+{\footnotesize\ttfamily void evenement (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{wood,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{int $\ast$}]{running,  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{pos,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map2,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{perso }\end{DoxyParamCaption})}
+
+
+
+To move background right and left through events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & \\
+\hline
+{\em perso} & character \\
+\hline
+{\em map} & first background \\
+\hline
+{\em wood} & character \\
+\hline
+{\em boat} & object in backgound \\
+\hline
+{\em map2} & second backgound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_afba8c0f01507d2a24008ca456b56d346}\label{scrolling_8c_afba8c0f01507d2a24008ca456b56d346}} 
+\index{scrolling.\+c@{scrolling.\+c}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{initialiser()}{initialiser()}}
+{\footnotesize\ttfamily void initialiser (\begin{DoxyParamCaption}\item[{\hyperlink{structObjet}{Objet} $\ast$}]{perso,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{wood,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map2,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{failed }\end{DoxyParamCaption})}
+
+
+
+To initialize the objecs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em perso} & character \\
+\hline
+{\em map} & first background \\
+\hline
+{\em wood} & character \\
+\hline
+{\em boat} & object in backgound \\
+\hline
+{\em map2} & second backgound \\
+\hline
+{\em failed} & fail image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_a610615c1db8b27253bd1a92619cba712}\label{scrolling_8c_a610615c1db8b27253bd1a92619cba712}} 
+\index{scrolling.\+c@{scrolling.\+c}!scrolling\+\_\+droit@{scrolling\+\_\+droit}}
+\index{scrolling\+\_\+droit@{scrolling\+\_\+droit}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{scrolling\+\_\+droit()}{scrolling\_droit()}}
+{\footnotesize\ttfamily void scrolling\+\_\+droit (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{pos,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat }\end{DoxyParamCaption})}
+
+
+
+To move background to the right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & \\
+\hline
+{\em map} & background \\
+\hline
+{\em pod} & position of backgound \\
+\hline
+{\em boat} & object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_af84ab34093d4babe8afbdb32a3faab1f}\label{scrolling_8c_af84ab34093d4babe8afbdb32a3faab1f}} 
+\index{scrolling.\+c@{scrolling.\+c}!scrolling\+\_\+gauche@{scrolling\+\_\+gauche}}
+\index{scrolling\+\_\+gauche@{scrolling\+\_\+gauche}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{scrolling\+\_\+gauche()}{scrolling\_gauche()}}
+{\footnotesize\ttfamily void scrolling\+\_\+gauche (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{S\+D\+L\+\_\+\+Rect $\ast$}]{pos,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat }\end{DoxyParamCaption})}
+
+
+
+To move background to the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & \\
+\hline
+{\em map} & background \\
+\hline
+{\em pod} & position of backgound \\
+\hline
+{\em boat} & object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scrolling_8c_ab79683685c7ff28aa21a69af89757f98}\label{scrolling_8c_ab79683685c7ff28aa21a69af89757f98}} 
+\index{scrolling.\+c@{scrolling.\+c}!setup@{setup}}
+\index{setup@{setup}!scrolling.\+c@{scrolling.\+c}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{wood,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{boat,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{map2,  }\item[{\hyperlink{structObjet}{Objet} $\ast$}]{perso }\end{DoxyParamCaption})}
+
+
+
+To display objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & \\
+\hline
+{\em perso} & character \\
+\hline
+{\em map} & first background \\
+\hline
+{\em wood} & character \\
+\hline
+{\em boat} & object in backgound \\
+\hline
+{\em map2} & second backgound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
